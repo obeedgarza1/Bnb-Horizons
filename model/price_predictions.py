@@ -11,15 +11,13 @@ from sklearn.metrics import (
 import numpy as np
 from sklearn.model_selection import GridSearchCV
 from scipy.stats import zscore
-from sklearn.model_selection import GridSearchCV
+import sys
 
+# Add backend folder to the path
+sys.path.append("../../")
+from backend.db_connection import get_sqlalchemy_session
 
-DATABASE_URL = "postgresql://postgres:Jugarfutbol1!@localhost:5432/airbnb_data"
-
-engine = create_engine(DATABASE_URL)
-
-Session = sessionmaker(bind=engine)
-session = Session()
+engine, session = get_sqlalchemy_session()
 
 
 def all_data():

@@ -1,15 +1,13 @@
-from sqlalchemy.orm import sessionmaker
-from sqlalchemy import create_engine, text
+from sqlalchemy import text
 import os
 import duckdb
-from itertools import product
 import sys
 import os
 
 
 # Add backend folder to the path
 sys.path.append("../../")
-from backend.db_connection import get_sqlalchemy_session, get_sqlite, get_duckdb_sqlite
+from backend.db_connection import get_sqlalchemy_session
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
 

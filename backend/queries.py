@@ -1,10 +1,10 @@
-# import sys
-# import os
+import sys
+import os
 
-# # Add backend folder to the path
-# sys.path.append(os.path.abspath("backend"))
-# from db_connection import get_duckdb_connection
-from backend.db_connection import get_duckdb_connection
+# Add backend folder to the path
+sys.path.append(os.path.abspath("backend"))
+from db_connection import get_duckdb_connection
+
 import streamlit as st
 import numpy as np
 import pandas as pd
