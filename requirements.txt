@@ -11,3 +11,4 @@ altair
 plotly
 scipy
 joblib
+xgboost
