@@ -9,3 +9,4 @@ folium
 python-dotenv
 altair
 plotly
+scipy
