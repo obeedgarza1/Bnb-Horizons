@@ -2,8 +2,6 @@ duckdb
 pandas
 numpy
 matplotlib
-seaborn
-psycopg2
 sqlalchemy
 streamlit
 geopandas
