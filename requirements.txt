@@ -6,12 +6,8 @@ seaborn
 psycopg2
 sqlalchemy
 streamlit
-scikit-learn
 geopandas
 folium
-geoalchemy2
-shapely
-xgboost
 python-dotenv
 altair
 plotly
