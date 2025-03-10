@@ -1,0 +1,10 @@
+# Ignore the data folder
+data/
+env/
+
+# Ignore the .env file (to keep secrets safe)
+.env
+
+# Ignore Python cache files
+*.pyc
+__pycache__/

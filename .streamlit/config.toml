@@ -1,0 +1,7 @@
+[theme]
+base="light"
+primaryColor="#003049"
+
+[runner]
+magicEnabled = false              # Disable implicit display of variables
+fastReruns = true                 # Speed up UI updates
