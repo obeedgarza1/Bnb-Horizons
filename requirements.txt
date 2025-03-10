@@ -10,3 +10,4 @@ python-dotenv
 altair
 plotly
 scipy
+joblib
