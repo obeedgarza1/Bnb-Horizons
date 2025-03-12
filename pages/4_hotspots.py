@@ -131,7 +131,12 @@ with col6:
 
 listings_df = st.session_state.listings_df
 
-if listings_df is not None:
+if listings_df is not None and not listings_df.empty:
+    if selected_city in ["Madrid", "Barcelona"]:
+        listings_df = listings_df.sample(frac=0.6, random_state=17)
+    else:
+        listings_df = listings_df.sample(frac=0.9, random_state=17)
+        
     if listings_df.empty:
         st.warning("No listings found for the selected filters.")
         st.stop()
@@ -166,7 +171,7 @@ if listings_df is not None:
         ).add_to(m)
 
         marker_cluster = MarkerCluster(
-            maxClusterRadius=50, disableClusteringAtZoom=20
+            maxClusterRadius=80, disableClusteringAtZoom=18
         ).add_to(m)
         listings_df["total_price"] = listings_df["price_float"] * selected_days
         listings_df["total_price"] = listings_df["total_price"].round(2)
@@ -190,18 +195,19 @@ if listings_df is not None:
         for _, row in listings_df.iterrows():
             seasonal_prices_html = format_seasonal_prices(row["seasonal_prices"])
             popup_html = f"""
-                <div style="width: 200px;">
+                <div style='width: 200px;'>
                     <h4>{row['neighbourhood']}</h4>
-                    <img src="{row['picture_url']}" width="100%" style="border-radius: 5px;">
+                    <img src='{row['picture_url']}' width="100%" style='border-radius: 5px;'>
                     <p><b>Average Price per Night${row['price_float']:.2f}</b></p>
                     <b>Total Price ({selected_days} nights):</b> ${row['total_price']}
                     <p><b>{row['property_type']}</b></p>
                     <p><b>Bedrooms:</b> {row['bedrooms']}</p>
                     <p><b>Bathrooms:</b> {row['bathrooms']}</p>
                     <p>{seasonal_prices_html}</p>
-                    <a href="{row['listing_url']}" target="_blank">View Listing</a>
+                    <a href='{row['listing_url']}' target="_blank">View Listing</a>
                 </div>
             """
+            
             folium.Marker(
                 location=[row["latitude"], row["longitude"]],
                 icon=folium.Icon(color="blue"),
