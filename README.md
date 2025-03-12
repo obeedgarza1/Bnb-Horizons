@@ -40,7 +40,7 @@ This project includes:
 ├── 📁 data_processing       # Data cleaning and preprocessing scripts
 ├── 📁 backend               # Database queries and API functions
 ├── 📁 pages                 # Streamlit UI components
-├── 📁 model                # Machine learning models for predictions
+├── 📁 model                 # Machine learning models for predictions
 ├── 📁 utilities             # Dictionary to work with amenities in a json format
 
 ├── app.py                   # Main Streamlit app file
