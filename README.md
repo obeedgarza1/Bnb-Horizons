@@ -48,20 +48,3 @@ This project includes:
 ```
 
 ---
-
-## 🚀 Getting Started
-### 1️⃣ Clone the Repository
-```bash
-git clone https://github.com/yourusername/BnB-Horizons.git
-cd BnB-Horizons
-```
-### 2️⃣ Install Dependencies
-```bash
-pip install -r requirements.txt
-```
-### 3️⃣ Run the App
-```bash
-streamlit run app.py
-```
-
----
