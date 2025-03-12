@@ -30,6 +30,7 @@ This project includes:
 - **Frontend:** Streamlit, Altair, Plotly
 - **Backend:** PostgreSQL, Pandas, SQLAlchemy, DUCKDB
 - **Data Processing:** PySpark, Python, PostgreSQL, Geospatial Libraries (Shapely, Geopandas)
+- **Machine Learning:** Scikit-learn, XGBoost, NumPy (for price and occupancy predictions)
 
 ---
 
@@ -39,7 +40,7 @@ This project includes:
 ├── 📁 data_processing       # Data cleaning and preprocessing scripts
 ├── 📁 backend               # Database queries and API functions
 ├── 📁 pages                 # Streamlit UI components
-├── 📁 models                # Machine learning models for predictions
+├── 📁 model                # Machine learning models for predictions
 ├── 📁 utilities             # Dictionary to work with amenities in a json format
 
 ├── app.py                   # Main Streamlit app file
