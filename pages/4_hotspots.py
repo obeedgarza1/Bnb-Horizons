@@ -214,29 +214,6 @@ if listings_df is not None and not listings_df.empty:
                 tooltip=popup_html,
             ).add_to(marker_cluster)
 
-        legend_html = """
-        <div style="
-            position: fixed;
-            bottom: 10px; left: 20px; width: 170px; height: auto;
-            background-color: white;
-            border:1px solid grey;
-            z-index:9999;
-            font-size:12px;
-            padding: 6px;
-            border-radius: 6px;
-        ">
-            <b>Price Legend</b><br>
-            <i style="background: #d9f5d1; width: 14px; height: 14px; display: inline-block;"></i> &lt;$20<br>
-            <i style="background: #c3e2b7; width: 14px; height: 14px; display: inline-block;"></i> $20-$49<br>
-            <i style="background: #86c77a; width: 14px; height: 14px; display: inline-block;"></i> $50-$99<br>
-            <i style="background: #e2d0b3; width: 14px; height: 14px; display: inline-block;"></i> $100-$199<br>
-            <i style="background: #e6a67b; width: 14px; height: 14px; display: inline-block;"></i> $200-$299<br>
-            <i style="background: #b24949; width: 14px; height: 14px; display: inline-block;"></i> $300+<br>
-        </div>
-        """
-
-        m.get_root().html.add_child(folium.Element(legend_html))
-
         return m
 
     m = create_map()
